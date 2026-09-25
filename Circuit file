@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project source="Logisim" version="2.7.1">
+  <circuit name="DigitalCodeLock">
+    <!-- Input Pins -->
+    <comp lib="0" name="Pin" loc="(100,100)">
+      <a name="facing" val="east"/>
+      <a name="label" val="Input0"/>
+    </comp>
+    <comp lib="0" name="Pin" loc="(100,140)">
+      <a name="facing" val="east"/>
+      <a name="label" val="Input1"/>
+    </comp>
+    <comp lib="0" name="Pin" loc="(100,180)">
+      <a name="facing" val="east"/>
+      <a name="label" val="Input2"/>
+    </comp>
+    <comp lib="0" name="Pin" loc="(100,220)">
+      <a name="facing" val="east"/>
+      <a name="label" val="Input3"/>
+    </comp>
+
+    <!-- Constants for Stored Code (1011) -->
+    <comp lib="0" name="Constant" loc="(160,100)">
+      <a name="value" val="1"/>
+    </comp>
+    <comp lib="0" name="Constant" loc="(160,140)">
+      <a name="value" val="0"/>
+    </comp>
+    <comp lib="0" name="Constant" loc="(160,180)">
+      <a name="value" val="1"/>
+    </comp>
+    <comp lib="0" name="Constant" loc="(160,220)">
+      <a name="value" val="1"/>
+    </comp>
+
+    <!-- XOR Gates for Comparison -->
+    <comp lib="1" name="XOR Gate" loc="(220,100)"/>
+    <comp lib="1" name="XOR Gate" loc="(220,140)"/>
+    <comp lib="1" name="XOR Gate" loc="(220,180)"/>
+    <comp lib="1" name="XOR Gate" loc="(220,220)"/>
+
+    <!-- OR Gate to combine mismatches -->
+    <comp lib="1" name="OR Gate" loc="(280,160)">
+      <a name="inputs" val="4"/>
+    </comp>
+
+    <!-- NOT Gate to invert result -->
+    <comp lib="1" name="NOT Gate" loc="(340,160)"/>      
+
+    <!-- LED Output -->
+    <comp lib="0" name="LED" loc="(400,160)">
+      <a name="label" val="Unlock"/>
+    </comp>
+  </circuit>
+</project>
+
